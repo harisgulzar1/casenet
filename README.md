@@ -27,7 +27,7 @@ General flow is as follows:
 1. [HLS](https://github.com/harisgulzar1/casenet/tree/main/HLS) contains the code HLS logic.
 (This code is written for CNN network with 3 convolutional layers. The structure of the network can be changed in C code but it should be same as the network which was trained using Pytorch in part 1.)
 2. Next part is to use the Vivado software to generate hardware file for FPGA.
-(Instructions to use Vivado software are explained in [power point tutorial](https://drive.google.com/file/d/12tVDj-0U91x_nHXJfFPUi4-i0-DsW-Oo/view?usp=sharing).)
+(Instructions to use Vivado software are explained in [this tutorial](https://drive.google.com/file/d/1xBOq8E_Gmbexnogg_90uC6P69DR-mJRE/view?usp=sharing).)
 
 ### Part 3: Application program on the device
 
