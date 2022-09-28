@@ -22,6 +22,21 @@ General flow is as follows:
 4. The CNN model and all relevant function for training the model on Google Speech Commands are defined in main file [main_wd.py](https://github.com/harisgulzar1/casenet/blob/main/pytorch/main_wd.py) file.
 5. This file will save the model weights in text form also you can save the audio files to test on M-KUBOS using this file.
 
+### Part 2: HLS Logic Design for FPGA part of M-KUBOS
 
+1. [HLS](https://github.com/harisgulzar1/casenet/tree/main/HLS) contains the code HLS logic.
+(This code is written for CNN network with 3 convolutional layers. The structure of the network can be changed in C code but it should be same as the network which was trained using Pytorch in part 1.)
+2. Next part is to use the Vivado software to generate hardware file for FPGA.
+(Instructions to use Vivado software are explained in power point tutorial.)
 
+### Part 3: Application program on the device
 
+By the point you have:
+1. Weights of the CNN network in .txt file.
+2. Input files for testing the network on M-KUBOS in .txt file.
+3. Hardware files for the FPGA (.bit and .hwh files).
+
+The next step is to transfer these files to M-KUBOS and run the applications program [CASENet2.py](https://github.com/harisgulzar1/casenet/blob/main/mukobosprogram/CASENet2.py)
+
+This file uses pynq library to use on-chip FPGA and send/receive data from ARM to FPGA part.
+There are many variables in the application program according to the size of CNN, these parameters should exactly be same as CNN parameters in HLS file and in Pytorch model file.
