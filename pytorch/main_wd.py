@@ -796,6 +796,10 @@ if __name__ == '__main__':
     if args.save_model:
         torch.save(model.state_dict(), "Net1.pt")
 
+    #############################################################
+    # SAVE THE MODEL WEIGHTS IN TEXT FILE TO TRANSFER TO MKUBOS #
+    #############################################################
+    
     # Printing and saving weights of network
 
     params_dir = 'weights/'
